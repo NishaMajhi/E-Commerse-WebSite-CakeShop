@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tittle>E-Commerce | About Us</tittle>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="images\Bakery.jpg"width="150"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html" target="_blank">About Us</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href=" contact.html" target="_blank">Contact</a>
+            <a href="login.html" target="_blank">Login/Register</a>
+            
+        </div>
+    </nav>
+    <div class="about_us">
+        <h2>About Us</h2>
+        <p>we made the baked food with flour, liquid, eggs, and other ingredients, such as raising agents and flavorings.
+            we have products like candy,jelly,choclates,different veriety of cakes,muffins,fillings,ice-creams,doughnuts etc.
+            we are provided all type of confectionery products for all type of events. 
+            we provided all the products with negotiables price.
+            we provide the  good delivery services also.
+            we respond quickly.
+    </div>
+
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+              <form name="submit-googlesheet" method="post">
+                    <input type="text" name="Name" placeholder="name"><br>
+                    <input type="email" name="Email" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+                    <button type="submit">Submit</button>
+               </form>
+          </div>
+  </div>
+   
+  
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="images\Bakery.jpg"width="150"></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about.html" target="_blank">About Us</a>|
+            <a href="service.html" target="_blank">Services</a>|
+            <a href="login.html" target="_blank">Login</a>|
+            <a href="sign.html" target="_blank">Sign Us</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms Of Use</a>|
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/nisha-majhi-0346571b5/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://api.WhatsApp.com/send?phone=+9195288860134" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="tel: +919528860134" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto: nishamajhi2020@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+         </div>
+         <hr>
+         <p>Copyright &copy 2021 , All rights reserved ;</p>
+    </footer>
+
+  
+     <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMBO6exwuFGauL_dbF3K9jxhwHjHw_vCtcM9h3AAsMQmcJ4L1wzy2kouw1FZCZrD7_/exec'
+        const form = document.forms['submit-googlesheet']
+     
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert(
+                    "Thanks for you valuable feedback!!!"))
+                .catch(error => console.error('Error!', error.message))
+        })
+     
+     </script>
+     
+     
+     
+</body>
+</html>
